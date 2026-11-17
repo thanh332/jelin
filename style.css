@@ -1,0 +1,1412 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+  --green: #254b35;
+  --deep: #183526;
+  --sage: #9cae83;
+  --cream: #f5efdf;
+  --paper: #fffaf0;
+  --brown: #805c43;
+  --rust: #a65e43;
+  --gold: #d3b878;
+  --text: #302e26;
+  --muted: #777568;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font-family: 'Nunito', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 5%;
+  background: var(--deep);
+  color: #e9dfc6;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 5%;
+  background: #fffaf0ed;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 3px 20px #1c302015;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--green);
+  font-family: 'DM Serif Display', serif;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.logo-icon {
+  font-size: 35px;
+}
+
+.logo small {
+  display: block;
+  margin-top: 7px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: var(--brown);
+}
+
+.main-header nav {
+  display: flex;
+  gap: 24px;
+}
+
+.main-header nav a {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--green);
+  transition: .2s;
+}
+
+.main-header nav a:hover {
+  color: var(--rust);
+}
+
+.header-button {
+  border: 1px solid var(--green);
+  padding: 10px 15px;
+  border-radius: 3px;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 800;
+  transition: .2s;
+}
+
+.header-button:hover {
+  background: var(--green);
+  color: white;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 700px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 7%;
+  background: linear-gradient(120deg, #e7dfc6, #cbd3ae 55%, #a4b28c);
+}
+
+.hero-sun {
+  position: absolute;
+  top: 75px;
+  right: 20%;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #f7e9b9;
+  box-shadow: 0 0 70px #f7e9b9;
+}
+
+.hero-content {
+  max-width: 490px;
+  position: relative;
+  z-index: 5;
+}
+
+.hero-label, .eyebrow {
+  color: var(--rust);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(65px, 9vw, 110px);
+  font-weight: 400;
+  line-height: .88;
+  margin: 25px 0;
+  color: var(--deep);
+}
+
+.hero h1 em, .section-heading h2 em,
+.cafe-content h2 em, .quiz-section h2 em,
+.ending h2 em {
+  color: var(--rust);
+  font-weight: 400;
+}
+
+.hero-content > p {
+  max-width: 390px;
+  line-height: 1.9;
+  color: #52634c;
+  font-size: 15px;
+}
+
+.hero-button {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+  padding: 15px 20px;
+  margin-top: 18px;
+  background: var(--green);
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: .25s;
+}
+
+.hero-button:hover {
+  background: var(--rust);
+  transform: translateY(-3px);
+}
+
+.hero-note {
+  margin-top: 35px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #62705a;
+}
+
+/* Kleine Hof-Landschaft */
+
+.hero-scene {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 53%;
+  height: 80%;
+}
+
+.hero-cloud {
+  position: absolute;
+  height: 25px;
+  width: 110px;
+  border-radius: 50px;
+  background: #fff9df99;
+}
+
+.cloud-one {
+  top: 20%;
+  left: 15%;
+}
+
+.cloud-two {
+  top: 33%;
+  right: 10%;
+  transform: scale(.7);
+}
+
+.hero-mountain {
+  position: absolute;
+  bottom: 17%;
+  width: 100%;
+  height: 45%;
+  background: #7e9270;
+  clip-path: polygon(0 70%, 25% 5%, 45% 65%, 68% 10%, 100% 75%, 100% 100%, 0 100%);
+  opacity: .7;
+}
+
+.mountain-two {
+  background: #a4ad7e;
+  height: 33%;
+  clip-path: polygon(0 60%, 20% 15%, 40% 65%, 65% 5%, 100% 60%, 100% 100%, 0 100%);
+  opacity: .8;
+}
+
+.hero-grass {
+  position: absolute;
+  bottom: 0;
+  height: 27%;
+  width: 100%;
+  background: linear-gradient(#788c58, #4e7148);
+  clip-path: polygon(0 18%, 25% 0, 50% 15%, 70% 0, 100% 12%, 100% 100%, 0 100%);
+}
+
+.hero-barn {
+  position: absolute;
+  z-index: 2;
+  bottom: 22%;
+  right: 15%;
+  width: 220px;
+}
+
+.barn-roof {
+  width: 0;
+  height: 0;
+  margin: auto;
+  border-left: 125px solid transparent;
+  border-right: 125px solid transparent;
+  border-bottom: 95px solid #754633;
+}
+
+.barn-body {
+  position: relative;
+  height: 145px;
+  background: #bd8159;
+  border: 6px solid #754633;
+}
+
+.barn-window {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 17px;
+  left: 20px;
+  border: 4px solid #754633;
+  background: #d7e3bb;
+}
+
+.barn-door {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 95px;
+  width: 70px;
+  background: #69422e;
+  border: 4px solid #4b3325;
+  border-bottom: 0;
+  display: grid;
+  place-items: center;
+  font-size: 33px;
+}
+
+.barn-sign {
+  position: absolute;
+  top: 108px;
+  right: 18px;
+  color: #f5e9c8;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.hero-horse {
+  position: absolute;
+  z-index: 4;
+  bottom: 13%;
+  left: 10%;
+  font-size: clamp(80px, 12vw, 145px);
+  filter: drop-shadow(4px 8px 5px #25351f55);
+  animation: horse-bob 3s ease-in-out infinite;
+}
+
+@keyframes horse-bob {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-9px) rotate(2deg); }
+}
+
+.hero-flower {
+  position: absolute;
+  z-index: 5;
+  bottom: 10%;
+  font-size: 30px;
+}
+
+.flower-one { left: 40%; }
+.flower-two { right: 7%; }
+
+.hero-bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--deep);
+  white-space: nowrap;
+}
+
+.hero-bottom span {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+/* ALLGEMEINE ABSCHNITTE */
+
+.section {
+  padding: 100px 7%;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 55px;
+}
+
+.section-heading h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(42px, 6vw, 67px);
+  line-height: 1;
+  font-weight: 400;
+  margin: 17px 0;
+  color: var(--deep);
+}
+
+.section-heading > p {
+  max-width: 520px;
+  margin: auto;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+/* HOF-KARTEN */
+
+.intro-section {
+  background: var(--paper);
+}
+
+.hof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1150px;
+  margin: auto;
+}
+
+.hof-card {
+  background: white;
+  box-shadow: 0 8px 25px #293c2910;
+  transition: .3s;
+}
+
+.hof-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px #293c2920;
+}
+
+.hof-illustration {
+  height: 190px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.stable-art {
+  background: linear-gradient(145deg, #d5b58d, #8c6244);
+}
+
+.meadow-art {
+  background: linear-gradient(#b9d0c2, #7e9d65);
+}
+
+.saddle-art {
+  background: linear-gradient(145deg, #d5c6a5, #9b8260);
+}
+
+.big-emoji {
+  font-size: 85px;
+  filter: drop-shadow(3px 7px 4px #35281933);
+  transition: .3s;
+}
+
+.hof-card:hover .big-emoji {
+  transform: scale(1.1) rotate(-4deg);
+}
+
+.art-label {
+  position: absolute;
+  bottom: 13px;
+  left: 15px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: white;
+  font-weight: 800;
+}
+
+.hof-card-content {
+  padding: 25px;
+}
+
+.card-number {
+  color: var(--rust);
+  font-size: 9px;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+.hof-card-content h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 25px;
+  font-weight: 400;
+  margin: 12px 0;
+}
+
+.hof-card-content p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.hof-card-content a {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.farm-note, .important-note {
+  max-width: 900px;
+  margin: 45px auto 0;
+  padding: 22px 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #e9eddd;
+  border-left: 4px solid var(--sage);
+}
+
+.farm-note > span, .important-note > span {
+  font-size: 30px;
+}
+
+.farm-note b, .important-note b {
+  color: var(--green);
+}
+
+.farm-note p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* PFERDEKARTEN */
+
+.horses-section {
+  background: #e8e5d4;
+}
+
+.horse-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.horse-card {
+  background: var(--paper);
+  overflow: hidden;
+  box-shadow: 0 7px 20px #293c2912;
+  transition: .3s;
+}
+
+.horse-card:hover {
+  transform: translateY(-6px);
+}
+
+.horse-photo {
+  height: 205px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.horse-photo-one {
+  background: linear-gradient(150deg, #d8e1d0, #a5b994);
+}
+
+.horse-photo-two {
+  background: linear-gradient(150deg, #edcfac, #b77d55);
+}
+
+.horse-photo-three {
+  background: linear-gradient(150deg, #d7c4a5, #937456);
+}
+
+.horse-photo-four {
+  background: linear-gradient(150deg, #dce1d1, #a1a982);
+}
+
+.horse-emoji {
+  font-size: 95px;
+  filter: drop-shadow(4px 8px 4px #2a211c33);
+  transition: .3s;
+}
+
+.horse-card:hover .horse-emoji {
+  transform: scale(1.12);
+}
+
+.horse-tag {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  background: var(--green);
+  color: white;
+  padding: 6px 9px;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.horse-details {
+  padding: 20px;
+}
+
+.horse-details h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 26px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.horse-breed {
+  color: var(--rust) !important;
+  font-weight: 800;
+  font-size: 10px !important;
+  margin: 4px 0 12px !important;
+}
+
+.horse-details p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.horse-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  padding-top: 13px;
+  margin-top: 15px;
+  border-top: 1px solid #e6ddce;
+  color: var(--green);
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.fiction-note {
+  text-align: center;
+  color: var(--muted);
+  font-size: 10px;
+  margin-top: 30px;
+}
+
+/* RASSEN */
+
+.breeds-section {
+  background: var(--paper);
+}
+
+.breed-list {
+  max-width: 950px;
+  margin: auto;
+}
+
+.breed-row {
+  display: grid;
+  grid-template-columns: 65px 1fr auto;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 15px;
+  border-bottom: 1px solid #e5ddce;
+  transition: .2s;
+}
+
+.breed-row:hover {
+  background: #f2f0e5;
+  padding-left: 25px;
+}
+
+.breed-icon {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e9eddd;
+  font-size: 25px;
+}
+
+.breed-row h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 23px;
+  font-weight: 400;
+  margin: 0 0 5px;
+}
+
+.breed-row p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.breed-type {
+  color: var(--rust);
+  font-size: 10px;
+  font-weight: 800;
+  text-align: right;
+}
+
+/* PFERDEWISSEN */
+
+.knowledge-section {
+  background: #e5e9d9;
+}
+
+.anatomy-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  max-width: 1050px;
+  margin: auto;
+  align-items: center;
+}
+
+.anatomy-picture {
+  min-height: 340px;
+  background: linear-gradient(145deg, #d1dcc4, #a6b58e);
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #f7f4e9;
+}
+
+.anatomy-horse {
+  font-size: clamp(120px, 17vw, 190px);
+  filter: drop-shadow(6px 12px 6px #293c2930);
+}
+
+.anatomy-caption {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--green);
+}
+
+.anatomy-parts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.part-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 17px;
+  border: 1px solid #c5cdb7;
+  background: #f8f6ed;
+  color: var(--green);
+  text-align: left;
+  font-size: 13px;
+  font-weight: 800;
+  transition: .2s;
+}
+
+.part-button:hover, .part-button.selected {
+  background: var(--green);
+  color: white;
+}
+
+.part-button span {
+  font-size: 20px;
+}
+
+.part-info {
+  padding: 20px;
+  margin-top: 5px;
+  background: #fffaf0;
+  border-left: 4px solid var(--rust);
+  min-height: 115px;
+}
+
+.part-info span {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--rust);
+  font-weight: 800;
+}
+
+.part-info p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.fact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  max-width: 1100px;
+  margin: 55px auto 0;
+}
+
+.fact-box {
+  padding: 22px;
+  background: #f8f6ed;
+  text-align: center;
+}
+
+.fact-box span {
+  font-size: 28px;
+}
+
+.fact-box strong {
+  display: block;
+  margin: 10px 0 5px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--green);
+}
+
+.fact-box p {
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* PFLEGE */
+
+.care-section {
+  background: var(--paper);
+}
+
+.care-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.care-card {
+  background: #f0f0e5;
+  padding: 28px;
+  border-bottom: 3px solid #a6b58e;
+  transition: .2s;
+}
+
+.care-card:hover {
+  transform: translateY(-5px);
+  background: #e8eddf;
+}
+
+.care-card > span {
+  font-size: 32px;
+}
+
+.care-card h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 12px 0 7px;
+  color: var(--green);
+}
+
+.care-card p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.important-note {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* AUSRÜSTUNG */
+
+.equipment-section {
+  background: #e8e2d1;
+}
+
+.equipment-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.equipment-item {
+  padding: 28px;
+  background: #fffaf0;
+  text-align: center;
+  border: 1px solid #ddd1bb;
+  transition: .25s;
+}
+
+.equipment-item:hover {
+  transform: rotate(-1deg) translateY(-5px);
+  box-shadow: 0 10px 25px #47352015;
+}
+
+.equipment-item span {
+  font-size: 42px;
+}
+
+.equipment-item h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 23px;
+  font-weight: 400;
+  color: var(--green);
+  margin: 12px 0 5px;
+}
+
+.equipment-item p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* REITSPORT */
+
+.sports-section {
+  background: #f1ecdf;
+}
+
+.sport-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.sport-card {
+  padding: 30px 22px;
+  background: #fffaf0;
+  border-top: 4px solid var(--rust);
+  text-align: center;
+  transition: .2s;
+}
+
+.sport-card:hover {
+  transform: translateY(-6px);
+}
+
+.sport-icon {
+  font-size: 39px;
+}
+
+.sport-card h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--green);
+}
+
+.sport-card p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* TAGESABLAUF */
+
+.day-section {
+  background: #e1e7d7;
+}
+
+.day-timeline {
+  max-width: 750px;
+  margin: auto;
+}
+
+.day-item {
+  display: grid;
+  grid-template-columns: 75px 55px 1fr;
+  gap: 18px;
+  align-items: center;
+  padding: 17px 0;
+  border-bottom: 1px solid #c6d0bb;
+}
+
+.day-time {
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px;
+  color: var(--rust);
+}
+
+.day-symbol {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f8f6ed;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+}
+
+.day-item h3 {
+  margin: 0 0 4px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--green);
+}
+
+.day-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* QUIZ */
+
+.quiz-section {
+  background: var(--green);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.quiz-decoration {
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+
+.quiz-section .eyebrow {
+  color: #d8c18d;
+}
+
+.quiz-section h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(40px, 6vw, 65px);
+  font-weight: 400;
+  margin: 15px 0;
+}
+
+.quiz-section h2 em {
+  color: #d8c18d;
+}
+
+.quiz-section > p {
+  color: #dce5d5;
+  font-size: 13px;
+}
+
+.quiz-card {
+  max-width: 610px;
+  margin: 40px auto 0;
+  padding: 32px;
+  background: #fffaf0;
+  color: var(--text);
+  text-align: left;
+  box-shadow: 0 15px 40px #0d1e1455;
+}
+
+.quiz-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--rust);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.quiz-progress {
+  flex: 1;
+  height: 5px;
+  background: #e4dfd0;
+}
+
+#quiz-progress-fill {
+  width: 0;
+  height: 100%;
+  background: var(--rust);
+  transition: .3s;
+}
+
+.quiz-card h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 26px;
+  font-weight: 400;
+  margin: 30px 0 20px;
+}
+
+.quiz-answers {
+  display: grid;
+  gap: 10px;
+}
+
+.quiz-answer {
+  padding: 14px;
+  border: 1px solid #ddd3c3;
+  background: transparent;
+  text-align: left;
+  color: var(--text);
+  font-size: 13px;
+  transition: .2s;
+}
+
+.quiz-answer:hover:not(:disabled) {
+  background: #ecefe4;
+  border-color: var(--green);
+}
+
+.quiz-answer.correct {
+  background: #dcebd9;
+  border-color: #64885d;
+}
+
+.quiz-answer.wrong {
+  background: #f3dede;
+  border-color: #b46c68;
+}
+
+.quiz-answer:disabled {
+  cursor: default;
+}
+
+#quiz-feedback {
+  min-height: 25px;
+  margin: 17px 0;
+  font-size: 12px;
+  color: var(--green);
+  line-height: 1.6;
+}
+
+.quiz-next {
+  padding: 12px 20px;
+  border: 0;
+  background: var(--green);
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.quiz-next:hover {
+  background: var(--rust);
+}
+
+/* HOF-CAFÉ */
+
+.cafe-section {
+  background: #76513b;
+  color: #fff8e8;
+  padding: 90px 8%;
+}
+
+.cafe-content {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.cafe-content .eyebrow {
+  color: #e4c998;
+}
+
+.cafe-content h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(45px, 6vw, 70px);
+  line-height: .98;
+  font-weight: 400;
+  margin: 20px 0;
+}
+
+.cafe-content h2 em {
+  color: #e4c998;
+}
+
+.cafe-content p {
+  color: #eee0ca;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.cafe-menu {
+  margin-top: 25px;
+}
+
+.cafe-menu div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 11px 0;
+  border-bottom: 1px dashed #ffffff55;
+  font-size: 12px;
+}
+
+.cafe-menu b {
+  color: #e4c998;
+}
+
+.cafe-content small {
+  display: block;
+  margin-top: 15px;
+  color: #e4d1b6;
+  font-size: 9px;
+}
+
+.cafe-art {
+  height: 340px;
+  background: #d2dfc2;
+  border: 12px solid #e5d4b7;
+  position: relative;
+  box-shadow: 0 15px 35px #28190f55;
+}
+
+.cafe-window {
+  position: absolute;
+  inset: 0 0 30%;
+  background: linear-gradient(#a9c5bc, #e3e2bd);
+  display: grid;
+  place-items: center;
+  font-size: 65px;
+}
+
+.cafe-table {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 32%;
+  background: #a16d4b;
+  display: grid;
+  place-items: center;
+  font-size: 35px;
+}
+
+.cafe-sign {
+  position: absolute;
+  right: -28px;
+  top: -30px;
+  padding: 13px 20px;
+  background: #e8d8b8;
+  color: var(--green);
+  font-family: 'DM Serif Display', serif;
+  font-size: 18px;
+  transform: rotate(5deg);
+}
+
+/* ABSCHLUSS */
+
+.ending {
+  padding: 100px 20px;
+  background: #d9e1cb;
+  text-align: center;
+}
+
+.ending-horses {
+  font-size: 45px;
+  margin-bottom: 25px;
+}
+
+.ending .eyebrow {
+  color: var(--rust);
+}
+
+.ending h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(48px, 8vw, 85px);
+  line-height: .98;
+  font-weight: 400;
+  color: var(--green);
+  margin: 20px 0;
+}
+
+.ending h2 em {
+  color: var(--rust);
+}
+
+.ending > p {
+  color: #69745c;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.ending .hero-button {
+  margin-top: 25px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 22px 5%;
+  background: var(--deep);
+  color: #e8dfc8;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .main-header {
+    flex-wrap: wrap;
+  }
+
+  .main-header nav {
+    gap: 13px;
+  }
+
+  .main-header nav a {
+    font-size: 10px;
+  }
+
+  .hof-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .horse-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sport-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-scene {
+    opacity: .65;
+  }
+}
+
+@media (max-width: 620px) {
+  .topbar span:nth-child(2) {
+    display: none;
+  }
+
+  .main-header {
+    justify-content: center;
+  }
+
+  .main-header nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    overflow-x: auto;
+  }
+
+  .header-button {
+    display: none;
+  }
+
+  .hero {
+    min-height: 750px;
+    align-items: flex-start;
+    padding-top: 75px;
+  }
+
+  .hero-scene {
+    width: 100%;
+    height: 48%;
+    opacity: .85;
+  }
+
+  .hero-barn {
+    transform: scale(.7);
+    transform-origin: bottom right;
+    right: 8%;
+  }
+
+  .hero-horse {
+    left: 5%;
+    font-size: 90px;
+  }
+
+  .section {
+    padding: 75px 5%;
+  }
+
+  .hof-grid, .horse-grid, .care-grid,
+  .equipment-grid, .sport-grid, .fact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .anatomy-layout, .cafe-content {
+    grid-template-columns: 1fr;
+  }
+
+  .anatomy-picture {
+    min-height: 250px;
+  }
+
+  .breed-row {
+    grid-template-columns: 48px 1fr;
+    gap: 12px;
+  }
+
+  .breed-icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .breed-type {
+    grid-column: 2;
+    text-align: left;
+  }
+
+  .day-item {
+    grid-template-columns: 55px 42px 1fr;
+    gap: 10px;
+  }
+
+  .day-time {
+    font-size: 18px;
+  }
+
+  .day-symbol {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  .day-item h3 {
+    font-size: 19px;
+  }
+
+  .cafe-art {
+    height: 260px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
